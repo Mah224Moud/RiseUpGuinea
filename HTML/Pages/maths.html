@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu déroulant responsive </title>
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <!-- fontawesome icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+    <nav>
+        <! -- LOGO -->
+        <div class="logo">
+            <span class="rouge">Rise</span>Up<strong>Guinea</strong>
+        </div>
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox"  id="btn">
+        <ul>
+            <! -- Menu Accueil -->
+            <li><a href="index.html">Accueil</a></li>
+
+            <! -- Menu Maths -->
+            <li>
+                <label for="btn-1" class="show">Maths +</label>
+                <a href="maths.html">Maths</a>
+                <input type="checkbox"  id="btn-1">
+                <! -- Sous menu Maths -->
+                <ul>
+                    <li><a href="">Analyse</a></li>
+                    <li><a href="">Arithmétique</a></li>
+                    <li><a href="">Barry Centre</a></li>
+                    <li><a href="">N Complexe</a></li>
+                    <li><a href="">Trigonométrie</a></li>
+                    <li><a href="">Probabilité</a></li>
+                </ul>
+            </li>
+
+            <! -- Menu Informatique -->
+            <li>
+                <label for="btn-2" class="show">Informatique +</label>
+                <a href="informatique.html">Informatique</a>
+                <input type="checkbox" id="btn-2">
+                <! -- Sous menu Informatique -->
+                <ul>
+                    <li><a href="">Html & Css</a></li>
+                    <li><a href="">Java</a></li>
+                    <li><a href="">C</a></li>
+                    <li><a href="">C++</a></li>
+                    <li><a href="">Python</a></li>
+                    <li><a href="">Php</a></li>
+                </ul>
+            </li>
+            <! -- Menu Contact -->
+            <li><a href="">Contact</a></li>
+
+            <! -- Menu Propos -->
+            <li><a href="propos.html">A propos</a></li>
+        </ul>
+    </nav>
+<h1>Bienvenue sur le cours de maths</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+
+<script>
+    $('.icon').click(function() {
+        $('span').toggleClass("cancel")
+        
+    });
+</script>
+</body>
+</html>
