@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+/*user-select: none;
+//margin: 0px;
+*/
+
 *
 {
-    margin: 0;
+    
+    margin: 5px;
     padding: 0;
-    user-select: none;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-
+/*//background: #f2f2f2;*/
 body{
-    background: #f2f2f2;
+    background: url(../Image/background.jpg);
+    color: #f2f2f2;
 }
 nav{
     background:rgb(179, 163, 163);
@@ -40,7 +45,7 @@ nav .logo
 }
 .rouge
 {
-  color: red;
+  color: rgb(255, 0, 0);
 }
 nav strong
 {
@@ -126,9 +131,9 @@ nav ul ul ul li
     top: -60px;
     left: 150px;
 }
-.show,.icon,input
+.show,.icon,.input
 {
-    display: none;
+    display:none;
 }
 
 .fa-plus
@@ -227,4 +232,115 @@ nav ul ul ul li
   {
       content: '\f00d';
   }
+}
+/****************************
+**********Footer**************
+*****************************/
+footer a
+{
+    text-decoration: none;
+}
+
+
+
+
+/*****************************
+**********Connexion***********
+*****************************/
+
+#filiere,#profession, #mail
+{
+    width: 200px;
+}
+#adresse
+{
+    width: 300px;
+}
+#envoyer
+{
+    margin-left: 15px;
+}
+#annuler
+{
+    margin-left: 0px;
+}
+
+fieldset
+{
+    border-radius: 20px;
+}
+legend
+{
+    text-align: center;
+}
+footer
+{
+    user-select: none;
+    text-align: center ;
+}
+
+.coco
+{
+    width: 50%;
+    margin-left: 30%;
+}
+
+/*************************
+********Connected*********
+*************************/
+
+a
+{
+    text-decoration: none;
+}
+.connectedform
+{
+    margin-left: 25%;
+}
+.connected
+{
+    width: 70%;
+    height: 320px;
+}
+
+#envoyer
+{
+    width: 20%;
+    margin-left: 25%;
+}
+#annuler
+{
+    width: 20%;
+}
+
+/***************
+****Membre******
+***************/
+.membre
+{
+    width: 50%;
+    height: 200px;
+}
+.member
+{
+    margin-left: 25%;
+}
+#btnconnexion
+{
+    margin-left: 35%;
+    width: 125px;
+
+}
+
+
+
+
+
+/*******************************
+************ALL*****************
+*******************************/
+
+h1
+{
+    text-align: center;
 }

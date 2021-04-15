@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <link rel="stylesheet" href="../../CSS/style.css">
+    <script src="../../JS/style.js"></script>
     <!-- fontawesome icon -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- jquery  -->
@@ -19,7 +20,7 @@
         <label for="btn" class="icon">
             <span class="fa fa-bars"></span>
         </label>
-        <input type="checkbox"  id="btn">
+        <input type="checkbox"  id="btn" class="input">
         <ul>
             <! -- Menu Accueil -->
             <li><a href="index.html">Accueil</a></li>
@@ -28,15 +29,15 @@
             <li>
                 <label for="btn-1" class="show">Maths +</label>
                 <a href="maths.html">Maths</a>
-                <input type="checkbox"  id="btn-1">
+                <input type="checkbox"  id="btn-1" class="input">
                 <! -- Sous menu Maths -->
                 <ul>
-                    <li><a href="">Analyse</a></li>
-                    <li><a href="">Arithmétique</a></li>
-                    <li><a href="">Barry Centre</a></li>
-                    <li><a href="">N Complexe</a></li>
-                    <li><a href="">Trigonométrie</a></li>
-                    <li><a href="">Probabilité</a></li>
+                    <li><a href="maths.html#analyse">Analyse</a></li>
+                    <li><a href="maths.html#arithmetique">Arithmétique</a></li>
+                    <li><a href="maths.html#bcentre">Barry Centre</a></li>
+                    <li><a href="maths.html#ncomplexe">N Complexe</a></li>
+                    <li><a href="maths.html#trigo">Trigonométrie</a></li>
+                    <li><a href="maths.html#proba">Probabilité</a></li>
                 </ul>
             </li>
 
@@ -44,15 +45,15 @@
             <li>
                 <label for="btn-2" class="show">Informatique +</label>
                 <a href="informatique.html">Informatique</a>
-                <input type="checkbox" id="btn-2">
+                <input type="checkbox" id="btn-2" class="input">
                 <! -- Sous menu Informatique -->
                 <ul>
-                    <li><a href="">Html & Css</a></li>
-                    <li><a href="">Java</a></li>
-                    <li><a href="">C</a></li>
-                    <li><a href="">C++</a></li>
-                    <li><a href="">Python</a></li>
-                    <li><a href="">Php</a></li>
+                    <li><a href="informatique.html#html">Html & Css</a></li>
+                    <li><a href="informatique.html#java">Java</a></li>
+                    <li><a href="informatique.html#c">C</a></li>
+                    <li><a href="informatique.html#cpp">C++</a></li>
+                    <li><a href="informatique.html#python">Python</a></li>
+                    <li><a href="informatique.html#php">Php</a></li>
                 </ul>
             </li>
             <! -- Menu Connexion -->
@@ -62,17 +63,76 @@
             <li><a href="propos.html">A propos</a></li>
         </ul>
     </nav>
-<h1>page de connexion</h1>
-<form action="traitement.php">
+<h1>Inscription</h1>
+<form action="traitement.php" class="coco">
     <fieldset>
-        <legend><h3>Inscription</h3></legend>
+        <legend><h3>Etat Civil</h3></legend>
+        <label for="mr">Mr</label><input type="radio" name="genre" id="mr">
+        <label for="mme">Mme</label><input type="radio" name="genre" id="mme"><br>
+        <label for="marie">Marié(e)</label><input type="radio" name="situation" id="marie"><label for="divorce">Divorcé(e)</label><input type="radio" name="situation" id="divorce"><label for="celibat">Célibataire</label><input type="radio" name="situation" id="celibat"><label for="veuf">veuf(ve)</label><input type="radio" name="situation" id="veuf"><br>
+        <label for="nom">*Nom: </label><input type="text" name="nom" id="nom"><br>
+        <label for="prenom">*Prénom: </label><input type="text" name="prenom" id="prenom"><br>
+        <label for="dnaissance">Date de naissance: </label><input type="date" name="dnaissance" id="dnaissance">
+    </fieldset>
+    <fieldset>
+        <legend><h3>Identifiant</h3></legend>
+        <label for="tel">Telephone: </label><input type="number" name="tel" id="tel" placeholder="+33 7 12345678"><br>
+        <label for="mail">*Email: </label><input type="email" name="mail" id="mail" placeholder="votremail@exemple.com"><br> 
+        <label for="mdp">*Mot de passe: </label><input type="password" name="mdp" id="mdp"><br>
+        <label for="mdpconfirmation">*Confirmation: </label><input type="password" name="mdpconfirmation" id="mdpconfirmation">   
     </fieldset>
     <fieldset>
         <legend><h3>Coordonnées</h3></legend>
+        <label for="pays">*Pays</label>
+            <select name="pays" id="pays" onchange="choixVille()">
+                <option value="votrepays">Votre pays</option>
+                <option value="france">France</option>
+                <option value="espagne">Espagne</option>
+                <option value="royaume-uni">Royaume-Uni</option>
+                <option value="allemagne">Allemagne</option>
+                <option value="portugal">Portugal</option>
+                <option value="russie">Russie</option>
+                <option value="belgique">Belgique</option>
+                <option value="suisse">Suisse</option>
+                <option value="suede">Suede</option>
+                <option value="italie">Italie</option>
+            </select><br>
+        <label for="ville">Ville: </label>
+            <select name="ville" id="ville">
+                <option value="votreville">Votre ville</option>
+                <option value="paris">Paris</option>
+                <option value="madrid">Madrid</option>
+                <option value="londres">Londres</option>
+                <option value="berlin">Berlin</option>
+                <option value="lisbonne">Lisbonne</option>
+                <option value="moscou">Moscou</option>
+                <option value="bruxelles">Bruxelles</option>
+                <option value="geneve">Geneve</option>
+                <option value="stockholm">Stockholm</option>
+                <option value="rome">Rome</option>
+            </select><br>
+        <label for="cp">Code Postal: </label><input type="number" name="cp" id="cp" placeholder="21000">
+        <label for="adresse">adresse: </label><input type="text" id="adresse" name="adresse" placeholder="rue, complement d'adresse">
     </fieldset>
     <fieldset>
         <legend><h3>Etudes</h3></legend>
+        <label for="diplome">*Diplome: </label>
+            <select name="diplome" id="diplome">
+                <option value="sansdiplome">Sans Diplome</option>
+                <option value="baccalaureat">Baccalauréat</option>
+                <option value="licence">Licence</option>
+                <option value="master">Master</option>
+                <option value="doctorat">Doctorat</option>
+            </select><br>
+        <label for="annee">Année d'obtention: </label><input type="number" name="annee" id="annee" min="1990" max="2021"><br>
+        <label for="filiere">Filière: </label><input type="text" id="filiere" name="filiere" placeholder="informatique, droit, economie"><br>
+        <label for="profession">Profession: </label><input type="text" id="profession" name="profession" placeholder="medecin, pilote"><br>
+
+        <input type="submit" value="Inscription" id="envoyer" onclick="alert('Votre inscription a été pris en compte')">
+        <input type="reset" value="Annuler" id="annuler">
     </fieldset>
+    <p>Les champs marqués d'une * sont obligatoires !!!</p>
+    <p>Vous avez un compte ? <a href="membre.html">Connectez-vous</a></p>
 </form>
 
 
@@ -88,4 +148,11 @@
     });
 </script>
 </body>
+
+<footer>
+    <a href="connected.html"><img src="../../Image/gmail.png" alt="" width="50px" height="50px"></a>
+    <a href="https://www.linkedin.com/in/mamoudou-diallo-528020199/"><img src="../../Image/linkedin.png" alt="" width="50px" height="50px"></a>
+    <a href="https://discord.gg/JC4dDfWvxH"><img src="../../Image/discord.png" alt="" width="60px" height="60px"></a>
+    <a href="https://www.snapchat.com/add/moudjosh"><img src="../../Image/snap.png" alt="" width="50px" height="50px"></a>
+</footer>
 </html>
